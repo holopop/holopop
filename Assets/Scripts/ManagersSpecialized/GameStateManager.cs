@@ -21,9 +21,7 @@ public class GameStateManager : MonoBehaviour, IGameManager {
     public void Startup(NetworkService service)
     {
         // Start in play mode
-        this.state = GameState.Play;
-
-        SetMode(GameState.Edit);
+        SetMode(GameState.Play);
     }
 
     public void SetMode(GameState mode)
