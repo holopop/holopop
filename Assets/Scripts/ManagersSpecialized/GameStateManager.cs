@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
- 
+public enum GameState { Edit, Play };
+
 public class GameStateManager : MonoBehaviour, IGameManager {
-    public enum GameState { Edit, Play };
     public GameState state { get; private set; }
     public ManagerStatus status { get; private set; }
 

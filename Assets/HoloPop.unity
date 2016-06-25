@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45055848, g: 0.50063163, b: 0.5758049, a: 1}
+  m_IndirectSpecularColor: {r: 0.4505589, g: 0.50063235, b: 0.5758059, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -331,6 +331,7 @@ GameObject:
   - 114: {fileID: 1075492247}
   - 114: {fileID: 1075492248}
   - 114: {fileID: 1075492249}
+  - 114: {fileID: 1075492250}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -429,7 +430,21 @@ MonoBehaviour:
   - prefab: {fileID: 1000011398377752, guid: 605d2709d9ffbac45a3e3a16c78d4e3f, type: 2}
     name: Right Stove
     debug_drop: 0
-  removeHoloPop: 0
+  destroyLastHoloPop: 0
+--- !u!114 &1075492250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1075492242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4152eadf0f31649b384e0c5a7f1b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playMode: 0
+  editMode: 0
+  currentMode: 
 --- !u!1 &1235564550 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100468, guid: c601cf4818fdef646a77291c9923ef3f, type: 2}

@@ -23,6 +23,10 @@ GameObject:
   - 65: {fileID: 65000011737866742}
   - 23: {fileID: 23000012476418662}
   - 114: {fileID: 114000012856408238}
+  - 114: {fileID: 114000012637909028}
+  - 114: {fileID: 114000012948037924}
+  - 114: {fileID: 114000010536715080}
+  - 114: {fileID: 114000012452775580}
   m_Layer: 0
   m_Name: BellyButtonPrefab
   m_TagString: Untagged
@@ -91,6 +95,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114000010536715080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011398377752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e50566835df3863429e1caf8ee6e8225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012452775580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011398377752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc2db61ae04e3bc45bb5f6507637536d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012637909028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1000011398377752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba9cf6d6586f9e4a83d791baeb45264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012856408238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,5 +137,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6269e05129d79ae42abe09a628020e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugTap: 0
+--- !u!114 &114000012948037924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011398377752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc2db61ae04e3bc45bb5f6507637536d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
