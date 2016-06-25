@@ -31,6 +31,7 @@ using System.Collections.Generic;
 [RequireComponent(typeof(SpeechManager))]
 
 [RequireComponent(typeof(HoloPopManager))]
+[RequireComponent(typeof(GameStateManager))]
 
 
 public class Managers : MonoBehaviour {
@@ -39,6 +40,7 @@ public class Managers : MonoBehaviour {
     public static SpeechManager Speech { get; private set; }
     public static SpatialMapper Mapper { get; private set; }
     public static HoloPopManager HoloPops { get; private set; }
+    public static GameStateManager GameState { get; private set; }
 
     private List<IGameManager> _startSequence;
     
@@ -51,6 +53,7 @@ public class Managers : MonoBehaviour {
         Gesture = GetComponent<GestureManager>();
         Speech = GetComponent<SpeechManager>();
         HoloPops = GetComponent<HoloPopManager>();
+        GameState = GetComponent<GameStateManager>();
 
         _startSequence = new List<IGameManager>();
         _startSequence.Add(Mapper);
@@ -58,6 +61,7 @@ public class Managers : MonoBehaviour {
         _startSequence.Add(Gesture);
         _startSequence.Add(Speech);
         _startSequence.Add(HoloPops);
+        _startSequence.Add(GameState);
         StartCoroutine(StartupManagers());
     }
 

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class HoloPopManager : MonoBehaviour, IGameManager {
     public GameObject HoloPopPrefab;
+    public GameObject MainSceneObject;
+
     List<HoloPop> HoloPopList;
     public ManagerStatus status { get; private set; }
 
@@ -33,6 +35,7 @@ public class HoloPopManager : MonoBehaviour, IGameManager {
     {
         HoloPop b = Instantiate(HoloPopPrefab).GetComponent<HoloPop>();
         b.transform.position = new Vector3(0, 0, 2);    // choose 2 on z so its in front of the camera
+        b.transform.parent = MainSceneObject.transform;
         AddHoloPop(b);
     }
 
