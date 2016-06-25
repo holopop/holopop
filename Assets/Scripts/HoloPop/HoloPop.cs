@@ -12,5 +12,19 @@ public class HoloPop : MonoBehaviour
 	    
     }
 
+    void Start()
+    {
+        Messenger<GameObject>.AddListener(ManagerTunedEvent.ON_TAP, OnTapMessage);
+
+    }
+
+    void OnTapMessage(GameObject targetObject)
+    {
+        if (targetObject == this.gameObject)
+        {
+            Debug.Log("I was tapped!");
+        }
+    }
+
 }
 

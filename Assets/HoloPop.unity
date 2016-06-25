@@ -331,6 +331,7 @@ GameObject:
   - 114: {fileID: 1075492247}
   - 114: {fileID: 1075492248}
   - 114: {fileID: 1075492249}
+  - 114: {fileID: 1075492250}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -424,6 +425,20 @@ MonoBehaviour:
   MainSceneObject: {fileID: 1482393018}
   makeHoloPop: 0
   removeHoloPop: 0
+--- !u!114 &1075492250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1075492242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4152eadf0f31649b384e0c5a7f1b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playMode: 0
+  editMode: 0
+  currentMode: 
 --- !u!1 &1235564550 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100468, guid: c601cf4818fdef646a77291c9923ef3f, type: 2}
