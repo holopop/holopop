@@ -419,9 +419,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0806aaa84f53d7546886471a3198f91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoloPopPrefab: {fileID: 1000011398377752, guid: 4b1632dcb3815df4d9d1bfc3091799d8,
-    type: 2}
-  makeHoloPop: 0
+  PopConfigs:
+  - prefab: {fileID: 1000011398377752, guid: 4b1632dcb3815df4d9d1bfc3091799d8, type: 2}
+    name: Belly Button
+    debug_drop: 0
+  - prefab: {fileID: 1000011398377752, guid: 9966b8755123f594d9e41a2e5248f154, type: 2}
+    name: Left Stove
+    debug_drop: 0
+  - prefab: {fileID: 1000011398377752, guid: 605d2709d9ffbac45a3e3a16c78d4e3f, type: 2}
+    name: Right Stove
+    debug_drop: 0
   removeHoloPop: 0
 --- !u!1 &1235564550 stripped
 GameObject:

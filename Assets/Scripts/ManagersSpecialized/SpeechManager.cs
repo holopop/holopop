@@ -17,14 +17,19 @@ public class SpeechManager : MonoBehaviour, IGameManager
 
     void BuildGameSpecificKeywordMap()
     {
-        keywords.Add("Make Pop", () =>
+        /// for each popconfig, make an "Add " recognizer
+        foreach (HoloPopConfig config in Managers.HoloPops.PopConfigs)
         {
-            Managers.HoloPops.MakeHoloPop();
-        });
+            string keyword_name = "Add " + config.name;
+            keywords.Add(keyword_name, () =>
+            {
+                Managers.HoloPops.SpawnNewHoloPop(config.name);
+            });
+        }
 
         keywords.Add("Destroy Pop", () =>
         {
-            Managers.HoloPops.DestroyHoloPop();
+            Managers.HoloPops.DestroyLastHoloPop();
         });
     }
 
