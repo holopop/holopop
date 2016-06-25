@@ -10,7 +10,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Holographic Academy
-  productName: Origami
+  productName: Holo Pop
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenStyle: 0
@@ -342,7 +342,7 @@ PlayerSettings:
   spritePackerPolicy: 
   scriptingDefineSymbols:
     14: 
-  metroPackageName: Origami
+  metroPackageName: HoloPop
   metroPackageVersion: 1.0.0.0
   metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
