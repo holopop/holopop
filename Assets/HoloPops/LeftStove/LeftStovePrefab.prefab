@@ -23,6 +23,8 @@ GameObject:
   - 65: {fileID: 65000011737866742}
   - 23: {fileID: 23000012476418662}
   - 114: {fileID: 114000012856408238}
+  - 114: {fileID: 114000014252818456}
+  - 114: {fileID: 114000013306962012}
   m_Layer: 0
   m_Name: LeftStovePrefab
   m_TagString: Untagged
@@ -100,5 +102,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6269e05129d79ae42abe09a628020e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugTap: 0
+--- !u!114 &114000013306962012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011398377752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc2db61ae04e3bc45bb5f6507637536d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000014252818456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011398377752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e50566835df3863429e1caf8ee6e8225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
