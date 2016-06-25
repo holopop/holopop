@@ -22,6 +22,9 @@ public class HoloPopManager : MonoBehaviour, IGameManager {
     [Header("Debug Commands")]
     [SerializeField] bool destroyLastHoloPop = false;
     [SerializeField] bool destroyAllPops = false;
+    [SerializeField] bool playAllPops = false;
+    [SerializeField] bool stopAllPops = false;
+
 
     #endregion
 
@@ -60,6 +63,28 @@ public class HoloPopManager : MonoBehaviour, IGameManager {
             return Managers.Gaze.hitSpatialMapInfo.point;
         }
         return new Vector3(0, 0, 2); ;    // choose 2 on z so its in front of the camera
+    }
+
+    public void PlayAllPops()
+    {
+        foreach (HoloPop pop in HoloPopList)
+        {
+            if (pop.gameObject.GetComponent<AudioSource>())
+            {
+                pop.gameObject.GetComponent<AudioSource>().Play();
+            }
+        }
+    }
+
+    public void StopAllPops()
+    {
+        foreach (HoloPop pop in HoloPopList)
+        {
+            if (pop.gameObject.GetComponent<AudioSource>())
+            {
+                pop.gameObject.GetComponent<AudioSource>().Stop();
+            }
+        }
     }
 
     public void SpawnNewHoloPop(string config_name)
@@ -115,6 +140,18 @@ public class HoloPopManager : MonoBehaviour, IGameManager {
         {
             DestroyAllPops();
             destroyAllPops = false;
+        }
+
+        if (playAllPops)
+        {
+            PlayAllPops();
+            playAllPops = false;
+        }
+
+        if (stopAllPops)
+        {
+            StopAllPops();
+            stopAllPops = false;
         }
 
 }

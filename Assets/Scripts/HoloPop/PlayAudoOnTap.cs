@@ -7,7 +7,7 @@ public class PlayAudoOnTap : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        this.audio = this.GetComponent<AudioSource>();
+        this.audio =this.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +20,7 @@ public class PlayAudoOnTap : MonoBehaviour {
         if (this.audio.isPlaying)
         {
             this.audio.Stop();
+            this.audio.Play();
         }
         else
         {

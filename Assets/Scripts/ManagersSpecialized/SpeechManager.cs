@@ -42,6 +42,17 @@ public class SpeechManager : MonoBehaviour, IGameManager
         {
             Managers.GameState.PlayMode();
         });
+
+        keywords.Add("Play All Pops", () =>
+        {
+            Managers.HoloPops.PlayAllPops();
+        });
+        keywords.Add("Stop All Pops", () =>
+        {
+            Managers.HoloPops.StopAllPops();
+        });
+
+
     }
 
     public void Startup(NetworkService service)
