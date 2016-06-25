@@ -46,6 +46,7 @@ public class SpeechManager : MonoBehaviour, IGameManager
         keywordRecognizer.Start();
         status = ManagerStatus.Started;
     }
+
     private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
     {
         System.Action keywordAction;
