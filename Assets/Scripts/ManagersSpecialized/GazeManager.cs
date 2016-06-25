@@ -38,4 +38,10 @@ public class GazeManager : MonoBehaviour, IGameManager {
         hitSpatialMap = Physics.Raycast(myTransform.position, myTransform.forward,
                             out hitSpatialMapInfo, 30.0f, SpatialMapper.PhysicsRaycastMask);
     } 
+
+    public void ClearHits()
+    {
+        hitAny = false;
+        hitSpatialMap = false;
+    }
 }
