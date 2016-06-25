@@ -21,14 +21,14 @@ public class GameStateManager : MonoBehaviour, IGameManager {
     public void Startup(NetworkService service)
     {
         // Start in edit mode
-        state = GameState.Edit;
+        this.state = GameState.Edit;
 
         SetMode(GameState.Edit);
     }
 
     public void SetMode(GameState mode)
     {
-        state = mode;
+        this.state = mode;
         this.currentMode = mode.ToString();
     }
 
