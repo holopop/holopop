@@ -21,6 +21,8 @@ public class HoloPopManager : MonoBehaviour, IGameManager {
     #region Debug
     [Header("Debug Commands")]
     [SerializeField] bool destroyLastHoloPop = false;
+    [SerializeField] bool destroyAllPops = false;
+
     #endregion
 
     public void Startup(NetworkService service)
@@ -77,6 +79,8 @@ public class HoloPopManager : MonoBehaviour, IGameManager {
             HoloPop b = HoloPopList[HoloPopList.Count - 1];
             destroyLastHoloPopFromList(b);
             DestroyObject(b.gameObject);
+            // reset the gaze just in case
+            Managers.Gaze.ClearHits();
             return true;
         }
         return false;
@@ -105,6 +109,12 @@ public class HoloPopManager : MonoBehaviour, IGameManager {
         {
             DestroyLastHoloPop();
             destroyLastHoloPop = false;
+        }
+
+        if (destroyAllPops)
+        {
+            DestroyAllPops();
+            destroyAllPops = false;
         }
 
 }

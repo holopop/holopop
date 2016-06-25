@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4505589, g: 0.50063235, b: 0.5758059, a: 1}
+  m_IndirectSpecularColor: {r: 0.45055848, g: 0.50063163, b: 0.5758049, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -430,7 +430,26 @@ MonoBehaviour:
   - prefab: {fileID: 1000011398377752, guid: 605d2709d9ffbac45a3e3a16c78d4e3f, type: 2}
     name: Right Stove
     debug_drop: 0
+  - prefab: {fileID: 1000013596081634, guid: b10b04bf9c4f3e0439741649f5c63a6a, type: 2}
+    name: Faucet
+    debug_drop: 0
+  - prefab: {fileID: 1000013596081634, guid: 8232e571742f3c24eb539969746933f7, type: 2}
+    name: Left Cabinet
+    debug_drop: 0
+  - prefab: {fileID: 1000013596081634, guid: 85ac5546a2609114db33dc64437dc64b, type: 2}
+    name: Hand Dryer
+    debug_drop: 0
+  - prefab: {fileID: 1000014191724144, guid: 70e72b35b0e7d204abc5380cf6ae93e1, type: 2}
+    name: Right Cabinet
+    debug_drop: 0
+  - prefab: {fileID: 1000014191724144, guid: 776ca4e76bfaa9c4aa9f760617aa42ff, type: 2}
+    name: Microwave
+    debug_drop: 0
+  - prefab: {fileID: 1000014191724144, guid: 4c50f7d519a9ae84a92cf3962103c2a5, type: 2}
+    name: Fridge
+    debug_drop: 0
   destroyLastHoloPop: 0
+  destroyAllPops: 0
 --- !u!114 &1075492250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,7 +631,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 1
   Priority: 128
   DopplerLevel: 0.1
