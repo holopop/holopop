@@ -82,6 +82,14 @@ public class HoloPopManager : MonoBehaviour, IGameManager {
         return false;
     }
 
+    public void DestroyAllPops()
+    {
+        while (DestroyLastHoloPop())
+        {
+            // loop until none left to destroy
+        }
+    }
+
     void ProcessDebugCommands()
     {  
         foreach (HoloPopConfig config in PopConfigs)
