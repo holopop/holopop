@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
- 
+public enum GameState { Edit, Play };
+
 public class GameStateManager : MonoBehaviour, IGameManager {
-    public enum GameState { Edit, Play };
     public GameState state { get; private set; }
     public ManagerStatus status { get; private set; }
 
@@ -21,14 +21,14 @@ public class GameStateManager : MonoBehaviour, IGameManager {
     public void Startup(NetworkService service)
     {
         // Start in edit mode
-        this.state = GameState.Edit;
+        state = GameState.Edit;
 
         SetMode(GameState.Edit);
     }
 
     public void SetMode(GameState mode)
     {
-        this.state = mode;
+        state = mode;
         this.currentMode = mode.ToString();
     }
 

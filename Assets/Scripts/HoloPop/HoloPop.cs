@@ -7,24 +7,42 @@ using System.Collections;
 
 public class HoloPop : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update () {
-	    
-    }
+
+    #region Debug
+    [Header("Debug Commands")]
+    [SerializeField]
+    bool debugTap = false;
+    #endregion
 
     void Start()
     {
         Messenger<GameObject>.AddListener(ManagerTunedEvent.ON_TAP, OnTapMessage);
-
     }
 
     void OnTapMessage(GameObject targetObject)
     {
         if (targetObject == this.gameObject)
         {
-            Debug.Log("I was tapped!");
+            GameState mode = Managers.GameState.state;
+
+            Debug.Log("I was tapped on " + mode + " mode!");
         }
     }
 
+
+
+    void ProcessDebugCommands()
+    {
+        if (debugTap)
+        {
+            OnTapMessage(this.gameObject);
+            debugTap = false;
+        }
+    }
+
+    void Update()
+    {
+        ProcessDebugCommands();
+    }
 }
 
