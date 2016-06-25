@@ -31,6 +31,11 @@ public class SpeechManager : MonoBehaviour, IGameManager
         {
             Managers.HoloPops.DestroyLastHoloPop();
         });
+
+        keywords.Add("Play Mode", () =>
+        {
+            Managers.GameState.PlayMode();
+        });
     }
 
     public void Startup(NetworkService service)
