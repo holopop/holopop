@@ -20,8 +20,8 @@ public class GameStateManager : MonoBehaviour, IGameManager {
 
     public void Startup(NetworkService service)
     {
-        // Start in edit mode
-        this.state = GameState.Edit;
+        // Start in play mode
+        this.state = GameState.Play;
 
         SetMode(GameState.Edit);
     }
