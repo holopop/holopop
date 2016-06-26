@@ -29,7 +29,7 @@ public class PlayAudoOnTap : MonoBehaviour {
         }
     }
 
-    void StopAudio()
+    public void StopAudio()
     {
         this.audio.mute = true;
         if (this.particles != null)
@@ -38,7 +38,7 @@ public class PlayAudoOnTap : MonoBehaviour {
         }
     }
 
-    void PlayAudio()
+    public void PlayAudio()
     {
         this.audio.mute = false;
         if (this.particles != null)

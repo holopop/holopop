@@ -67,22 +67,24 @@ public class HoloPopManager : MonoBehaviour, IGameManager {
 
     public void PlayAllPops()
     {
-        foreach (HoloPop pop in HoloPopList)
+        HoloPop[] existingPops = FindObjectsOfType<HoloPop>();
+        foreach (HoloPop pop in existingPops)
         {
-            if (pop.gameObject.GetComponent<AudioSource>())
+            if (pop.gameObject.GetComponent<PlayAudoOnTap>())
             {
-                pop.gameObject.GetComponent<AudioSource>().Play();
+                pop.gameObject.GetComponent<PlayAudoOnTap>().PlayAudio();
             }
         }
     }
 
     public void StopAllPops()
     {
-        foreach (HoloPop pop in HoloPopList)
+        HoloPop[] existingPops = FindObjectsOfType<HoloPop>();
+        foreach (HoloPop pop in existingPops)
         {
-            if (pop.gameObject.GetComponent<AudioSource>())
+            if (pop.gameObject.GetComponent<PlayAudoOnTap>())
             {
-                pop.gameObject.GetComponent<AudioSource>().Stop();
+                pop.gameObject.GetComponent<PlayAudoOnTap>().StopAudio();
             }
         }
     }

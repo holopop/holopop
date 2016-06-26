@@ -68,7 +68,6 @@ public class SpeechManager : MonoBehaviour, IGameManager
             Managers.HoloPops.StopAllPops();
         });
 
-
     }
 
     public void Startup(NetworkService service)
