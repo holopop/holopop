@@ -8,6 +8,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.Windows.Speech;
+using UnityEngine.SceneManagement;
 
 public class SpeechManager : MonoBehaviour, IGameManager
 {
@@ -66,6 +67,17 @@ public class SpeechManager : MonoBehaviour, IGameManager
         keywords.Add("Stop All Pops", () =>
         {
             Managers.HoloPops.StopAllPops();
+        });
+
+
+        keywords.Add("Load chicken crime scene", () =>
+        {
+            SceneManager.LoadScene("ChickenCrime");
+        });
+
+        keywords.Add("Load music scene", () =>
+        {
+            SceneManager.LoadScene("Music");
         });
 
     }

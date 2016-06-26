@@ -4,6 +4,21 @@ public class TapToPlaceParent : MonoBehaviour
 {
     bool placing = false;
 
+    private Renderer[] renderers;
+     
+    void Start()
+    {
+        renderers = this.GetComponentsInChildren<Renderer>();
+    }
+
+    void SetTint(Color color)
+    {
+        foreach (Renderer renderer in renderers)
+        {
+            renderer.material.color = color;
+        }
+    }
+
     // Called by GazeGestureManager when the user performs a Tap gesture
     void OnEditTap()
     {
@@ -15,12 +30,14 @@ public class TapToPlaceParent : MonoBehaviour
         {
             Debug.Log("Started moving object");
             Managers.Mapper.DrawVisualMeshes = true;
+            SetTint(Color.red);
         }
         // If the user is not in placing mode, hide the spatial mapping mesh.
         else
         {
             Debug.Log("Finished moving object");
             Managers.Mapper.DrawVisualMeshes = false;
+            SetTint(new Color(0,0,0,0));
         }
     }
 
