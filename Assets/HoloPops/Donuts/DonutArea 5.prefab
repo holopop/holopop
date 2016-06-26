@@ -91,6 +91,7 @@ GameObject:
   - 114: {fileID: 114000010618790140}
   - 82: {fileID: 82000014180843916}
   - 114: {fileID: 114000010972295916}
+  - 114: {fileID: 114000013907235592}
   m_Layer: 8
   m_Name: HitArea
   m_TagString: Untagged
@@ -370,6 +371,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 968d55a98c81c89459d0a305762be9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000013907235592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013789467858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6269e05129d79ae42abe09a628020e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugTap: 0
 --- !u!198 &198000010800320022
 ParticleSystem:
   m_ObjectHideFlags: 1
