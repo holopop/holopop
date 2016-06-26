@@ -27,6 +27,18 @@ public class SpeechManager : MonoBehaviour, IGameManager
             });
         }
 
+        foreach (HoloPopConfig config in Managers.HoloPops.PopConfigs)
+        {
+            string keyword_name = "Add ten " + config.name;
+            keywords.Add(keyword_name, () =>
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    Managers.HoloPops.SpawnNewHoloPop(config.name);
+                }
+            });
+        }
+
         keywords.Add("Destroy Pop", () =>
         {
             Managers.HoloPops.DestroyLastHoloPop();
@@ -37,6 +49,10 @@ public class SpeechManager : MonoBehaviour, IGameManager
             Managers.HoloPops.DestroyAllPops();
         });
 
+        keywords.Add("Edit Mode", () =>
+        {
+            Managers.GameState.EditMode();
+        });
 
         keywords.Add("Play Mode", () =>
         {

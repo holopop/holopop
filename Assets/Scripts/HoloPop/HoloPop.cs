@@ -36,10 +36,10 @@ public class HoloPop : MonoBehaviour
                     // attached that implement the required methods (OnEditTap and OnPlayTap)
                     // We will have a generic behavior for editing, and we might have custom 
                     // behaviors for playing depending on what the game object needs to do.
-                    gameObject.SendMessage("OnEditTap");
+                    gameObject.BroadcastMessage("OnEditTap");
                     break;
                 case GameState.Play:
-                    gameObject.SendMessage("OnPlayTap");
+                    gameObject.BroadcastMessage("OnPlayTap");
                     break;
                 default:
                     Debug.Log("Unhandled tap while on unknown state:" + mode);

@@ -5,7 +5,7 @@ public class TapToPlaceParent : MonoBehaviour
     bool placing = false;
 
     // Called by GazeGestureManager when the user performs a Tap gesture
-    void OnTap()
+    void OnEditTap()
     {
         // On each Select gesture, toggle whether the user is in placing mode.
         placing = !placing;
@@ -13,11 +13,13 @@ public class TapToPlaceParent : MonoBehaviour
         // If the user is in placing mode, display the spatial mapping mesh.
         if (placing)
         {
+            Debug.Log("Started moving object");
             Managers.Mapper.DrawVisualMeshes = true;
         }
         // If the user is not in placing mode, hide the spatial mapping mesh.
         else
         {
+            Debug.Log("Finished moving object");
             Managers.Mapper.DrawVisualMeshes = false;
         }
     }

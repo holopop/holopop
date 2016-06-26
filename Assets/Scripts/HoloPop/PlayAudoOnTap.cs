@@ -3,11 +3,13 @@ using System.Collections;
 
 public class PlayAudoOnTap : MonoBehaviour {
 
-    public AudioSource audio;
+    private AudioSource audio;
+    private ParticleSystem particles;
 
 	// Use this for initialization
 	void Start () {
         this.audio =this.GetComponent<AudioSource>();
+        this.particles = this.transform.parent.GetComponentInChildren<ParticleSystem>();
 	}
 	
 	// Update is called once per frame
@@ -19,12 +21,30 @@ public class PlayAudoOnTap : MonoBehaviour {
     {
         if (this.audio.isPlaying)
         {
-            this.audio.Stop();
-            this.audio.Play();
+            StopAudio();
         }
         else
         {
-            this.audio.Play();
+            PlayAudio();
+        }
+    }
+
+    void StopAudio()
+    {
+        this.audio.Stop();
+        if (this.particles != null)
+        {
+            this.particles.Stop();
+        }
+    }
+
+    void PlayAudio()
+    {
+        this.audio.Play();
+        if (this.particles != null)
+        {
+            this.particles.loop = true;
+            this.particles.Play();
         }
     }
 }

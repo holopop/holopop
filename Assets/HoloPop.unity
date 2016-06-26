@@ -405,7 +405,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 470424, guid: c8685776cafe5d24493303e077fffcfb, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c8685776cafe5d24493303e077fffcfb, type: 2}
@@ -587,6 +587,9 @@ MonoBehaviour:
     debug_drop: 0
   - prefab: {fileID: 1000014191724144, guid: 4c50f7d519a9ae84a92cf3962103c2a5, type: 2}
     name: Fridge
+    debug_drop: 0
+  - prefab: {fileID: 1586026965}
+    name: Donut
     debug_drop: 0
   destroyLastHoloPop: 0
   destroyAllPops: 0
@@ -815,8 +818,55 @@ Transform:
   - {fileID: 1841472249}
   - {fileID: 1040290536}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1521897035
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000010639042290, guid: 5ff89cb142ccc764cbf39acb2a4fe4f3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010639042290, guid: 5ff89cb142ccc764cbf39acb2a4fe4f3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.114
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010639042290, guid: 5ff89cb142ccc764cbf39acb2a4fe4f3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.298
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010639042290, guid: 5ff89cb142ccc764cbf39acb2a4fe4f3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010639042290, guid: 5ff89cb142ccc764cbf39acb2a4fe4f3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010639042290, guid: 5ff89cb142ccc764cbf39acb2a4fe4f3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010639042290, guid: 5ff89cb142ccc764cbf39acb2a4fe4f3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010639042290, guid: 5ff89cb142ccc764cbf39acb2a4fe4f3, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5ff89cb142ccc764cbf39acb2a4fe4f3, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1586026965 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010225349126, guid: 5ff89cb142ccc764cbf39acb2a4fe4f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1521897035}
 --- !u!1 &1804095399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,12 +1085,12 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
+    m_Bits: 4294967039
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 0
+  m_HDR: 1
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -1072,6 +1122,23 @@ Transform:
   m_Father: {fileID: 1482393019}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1997514718 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013789467858, guid: 5ff89cb142ccc764cbf39acb2a4fe4f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1521897035}
+--- !u!114 &1997514719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1997514718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6269e05129d79ae42abe09a628020e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugTap: 0
 --- !u!1 &2050283053
 GameObject:
   m_ObjectHideFlags: 0
