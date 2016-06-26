@@ -19,7 +19,7 @@ public class PlayAudoOnTap : MonoBehaviour {
 
     void OnPlayTap()
     {
-        if (this.audio.isPlaying)
+        if (!this.audio.mute)
         {
             StopAudio();
         }
@@ -31,7 +31,7 @@ public class PlayAudoOnTap : MonoBehaviour {
 
     void StopAudio()
     {
-        this.audio.Stop();
+        this.audio.mute = true;
         if (this.particles != null)
         {
             this.particles.Stop();
@@ -40,7 +40,7 @@ public class PlayAudoOnTap : MonoBehaviour {
 
     void PlayAudio()
     {
-        this.audio.Play();
+        this.audio.mute = false;
         if (this.particles != null)
         {
             this.particles.loop = true;
